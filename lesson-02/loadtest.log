@@ -1,0 +1,56 @@
+alex@WIN-5Q0F127H8OR:/mnt/c/Windows/system32$ ab -k -c 350 -n 20000 127.0.0.1:8080/
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 2000 requests
+Completed 4000 requests
+Completed 6000 requests
+Completed 8000 requests
+Completed 10000 requests
+Completed 12000 requests
+Completed 14000 requests
+Completed 16000 requests
+Completed 18000 requests
+Completed 20000 requests
+Finished 20000 requests
+
+
+Server Software:        nginx/1.21.6
+Server Hostname:        127.0.0.1
+Server Port:            8080
+
+Document Path:          /
+Document Length:        14 bytes
+
+Concurrency Level:      350
+Time taken for tests:   4.280 seconds
+Complete requests:      20000
+Failed requests:        15318
+   (Connect: 0, Receive: 0, Length: 15318, Exceptions: 0)
+Keep-Alive requests:    4703
+Total transferred:      761886 bytes
+HTML transferred:       65842 bytes
+Requests per second:    4673.27 [#/sec] (mean)
+Time per request:       74.894 [ms] (mean)
+Time per request:       0.214 [ms] (mean, across all concurrent requests)
+Transfer rate:          173.85 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    3   4.7      1      30
+Processing:     0   71  41.9     72     269
+Waiting:        0   24  46.3      0     269
+Total:          0   74  42.6     75     277
+
+Percentage of the requests served within a certain time (ms)
+  50%     75
+  66%     89
+  75%     99
+  80%    106
+  90%    125
+  95%    149
+  98%    176
+  99%    192
+ 100%    277 (longest request)
