@@ -3,8 +3,12 @@ services:
   web:
     build:
       context: ./nginx
-    image: webserver
     ports:
      - "8080:80"
     environment:
      - NGINX_PORT=80
+  app:
+    build:
+      context: ./app
+    ports:
+      - "8000:8000"
